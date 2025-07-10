@@ -4,7 +4,7 @@ report 50000 "SDH Sales Invoice Lines"
     ApplicationArea = All;
     Caption = 'Sales Invoice Lines';
     Description = 'Report to export Sales Invoice Lines to Excel';
-    RDLCLayout = 'layouts/SDHSalesInvoiceLines.rdl';
+    RDLCLayout = './src/Report_Saurav/layouts/SDHSalesInvoiceLines.rdl';
 
     dataset
     {
