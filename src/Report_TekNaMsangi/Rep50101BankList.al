@@ -18,6 +18,7 @@ report 50101 "Bank Account List"
             column(BankBalance; "Balance (LCY)") { }
             column(CompanyName; compInfo.Name) { }
             column(CompanyPic; compInfo.Picture) { }
+            column(BankReportTitle; BankReportTitle) { }
         }
     }
 
@@ -30,4 +31,5 @@ report 50101 "Bank Account List"
 
     var
         CompInfo: Record "Company Information";
+        BankReportTitle: Label 'Bank Account List';
 }
