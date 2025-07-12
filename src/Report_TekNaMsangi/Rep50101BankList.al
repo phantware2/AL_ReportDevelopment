@@ -19,6 +19,18 @@ report 50101 "Bank Account List"
             column(CompanyName; compInfo.Name) { }
             column(CompanyPic; compInfo.Picture) { }
             column(BankReportTitle; BankReportTitle) { }
+            dataitem("Bank Account Ledger Entry"; "Bank Account Ledger Entry")
+            {
+                DataItemLink = "Bank Account No." = field("No.");
+                // DataItemTableView = sorting("Posting Date");
+
+                column(Document_No_; "Document No.") { }
+                column(Description; Description) { }
+                column(PostingDate; "Posting Date") { }
+                column(Amount; Amount) { }
+                // column(CurrencyCode; "Currency Code") { }
+                // column(EntryNo; "Entry No.") { }
+            }
         }
     }
 
