@@ -3,7 +3,7 @@ report 50000 "SDH Sales Invoice Lines"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     Caption = 'Sales Invoice Lines';
-    Description = 'Report to export Sales Invoice Lines to Excel';
+    DefaultLayout = RDLC;
     RDLCLayout = './src/Report_Saurav/layouts/SDHSalesInvoiceLines.rdl';
 
     dataset
