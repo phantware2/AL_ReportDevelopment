@@ -1,23 +1,26 @@
-#AL PROJECT
-
 ## Learning AL Development
 
 ### Report Triggers
 
-- Triggers
-  InitReport: Report is Initialized
+- OnInitReport: Report is Initialized
+  This is run before the request page trigger, it is run before any processing is done for the data item
 
-- PreReport:
-  This runs before the report start execution
-- PostReport:
+- OnPreReport:
+  After the request page, we go to the OnPreReport trigger, this runs before the report start execution.
+  On the OnPreReport trigger, we process the items (Any values entered) on the request page, this will be processed on the PreReport.
+  At the time you are running the OnPreReport, there is no data that is being processed
+
+- OnPostReport:
   This get called at the end of the report
 
 ### Data Item Triggers
 
 - PreDataItem:
   This is called before that data item actually start executing
+
 - AfterGetRecords:
   This is called when every record of that particular data item is fetched
+
 - PostDataItems:
   This is called at the end of that data item
 
@@ -39,6 +42,8 @@ Labels can be added to Data Items.
   - Improve performance.
 
 ## Request Page
+
+After the OnInitReport trigger is ran, the system generate the request page. In the request page, we can add our filters and other processings.
 
 - The request page collects requests and options from users before execution.
 - Request pages enable users to specify options and filters for a report.
