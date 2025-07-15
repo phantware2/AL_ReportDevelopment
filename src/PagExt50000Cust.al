@@ -23,7 +23,7 @@ pageextension 50000 CustomerExt extends "Customer List"
                     Customer.Reset();
                     customer.SetRange("No.", Rec."No.");
                     if Customer.FindSet() then
-                        Report.Run(Report::"Business Report", false, false, Customer);
+                        Report.Run(Report::"Business Report", true, false, Customer);
                 end;
             }
         }
