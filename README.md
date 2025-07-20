@@ -16,10 +16,10 @@
 ### Data Item Triggers
 
 - PreDataItem:
-  This is called before that data item actually start executing
+  This is called before that data item actually start executing. This is called or executed when you run the report before the data is get loaded into the report or when the report started. It is commonly used for filtering if you want to filter some records for this table based on some fixed things or maybe something which user input on the request page.
 
 - AfterGetRecords:
-  This is called when every record of that particular data item is fetched
+  This is called when every record of that particular data item is fetched. It is executed N number of times where N is number of Records in that particular table.
 
 - PostDataItems:
   This is called at the end of that data item
