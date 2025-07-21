@@ -28,10 +28,10 @@ report 50001 "My Custom Sales Order"
             {
                 group(GroupName)
                 {
-                    field(Name; SourceExpression)
-                    {
+                    // field(Name; SourceExpression)
+                    // {
 
-                    }
+                    // }
                 }
             }
         }
