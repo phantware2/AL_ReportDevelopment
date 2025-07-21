@@ -12,13 +12,14 @@ report 50002 TestReport
         {
             column(DocumentTypeSH; "Document Type") { }
             column(NoSH; "No.") { }
-        }
-        dataitem(SalesLine; "Sales Line")
-        {
-            column(DocumentTypeSL; "Document Type") { }
-            column(DocumentNoSL; "Document No.") { }
-            column(LineNoSL; "Line No.") { }
-            column(NoSL; "No.") { }
+
+            dataitem(SalesLine; "Sales Line")
+            {
+                column(DocumentTypeSL; "Document Type") { }
+                column(DocumentNoSL; "Document No.") { }
+                column(LineNoSL; "Line No.") { }
+                column(NoSL; "No.") { }
+            }
         }
     }
 
