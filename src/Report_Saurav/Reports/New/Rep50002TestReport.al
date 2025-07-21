@@ -2,7 +2,8 @@ report 50002 TestReport
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    DefaultRenderingLayout = LayoutName;
+    DefaultLayout = RDLC;
+    RDLCLayout = './src/Report_Saurav/layouts/TestReport.rdl';
 
     dataset
     {
@@ -31,10 +32,10 @@ report 50002 TestReport
             {
                 group(GroupName)
                 {
-                    field(Name; SourceExpression)
-                    {
+                    // field(Name; SourceExpression)
+                    // {
 
-                    }
+                    // }
                 }
             }
         }
@@ -48,15 +49,6 @@ report 50002 TestReport
 
                 }
             }
-        }
-    }
-
-    rendering
-    {
-        layout(LayoutName)
-        {
-            Type = Excel;
-            LayoutFile = 'mySpreadsheet.xlsx';
         }
     }
 
