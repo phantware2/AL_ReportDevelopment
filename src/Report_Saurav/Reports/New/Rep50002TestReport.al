@@ -23,6 +23,8 @@ report 50002 TestReport
             {
                 DataItemLinkReference = SalesHeader;
                 DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
+                DataItemTableView = sorting("Document Type", "Document No.", "Line No.") order(ascending);
+
                 column(DocumentTypeSL; "Document Type") { }
                 column(DocumentNoSL; "Document No.") { }
                 column(LineNoSL; "Line No.") { }
