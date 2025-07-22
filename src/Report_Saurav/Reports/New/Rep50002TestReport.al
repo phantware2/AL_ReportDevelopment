@@ -29,6 +29,11 @@ report 50002 TestReport
                 column(DocumentNoSL; "Document No.") { }
                 column(LineNoSL; "Line No.") { }
                 column(NoSL; "No.") { }
+
+                dataitem("Sales Comment Line"; "Sales Comment Line")
+                {
+                    column(Comment; Comment) { }
+                }
             }
         }
     }
