@@ -10,11 +10,14 @@ report 50002 TestReport
 
         dataitem(SalesHeader; "Sales Header")
         {
+            DataItemTableView = where("Document Type" = const("Order"));
             RequestFilterFields = "Document Type", "No.";
             PrintOnlyIfDetail = true;
 
             column(DocumentTypeSH; "Document Type") { }
             column(NoSH; "No.") { }
+            column(PostingDateSH; "Posting Date") { }
+            column(CustomerNoSH; "Sell-to Customer No.") { }
 
             dataitem(SalesLine; "Sales Line")
             {

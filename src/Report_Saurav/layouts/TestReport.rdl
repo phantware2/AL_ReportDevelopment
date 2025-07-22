@@ -510,6 +510,12 @@ End Function
         <Field Name="NoSH">
           <DataField>NoSH</DataField>
         </Field>
+        <Field Name="PostingDateSH">
+          <DataField>PostingDateSH</DataField>
+        </Field>
+        <Field Name="CustomerNoSH">
+          <DataField>CustomerNoSH</DataField>
+        </Field>
         <Field Name="DocumentTypeSL">
           <DataField>DocumentTypeSL</DataField>
         </Field>
