@@ -32,6 +32,8 @@ report 50002 TestReport
 
                 dataitem("Sales Comment Line"; "Sales Comment Line")
                 {
+                    DataItemLink = "Document Type" = field("Document Type"), "No." = field("Document No."), "Line No." = field("Line No.");
+
                     column(Comment; Comment) { }
                 }
             }
