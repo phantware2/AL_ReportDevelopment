@@ -10,11 +10,16 @@ report 50002 TestReport
 
         dataitem(SalesHeader; "Sales Header")
         {
+            RequestFilterFields = "Document Type", "No.";
+            PrintOnlyIfDetail = true;
+
             column(DocumentTypeSH; "Document Type") { }
             column(NoSH; "No.") { }
 
             dataitem(SalesLine; "Sales Line")
             {
+                DataItemLinkReference = SalesHeader;
+                DataItemLink = "Document Type" = field("Document Type"), "Document No." = field("No.");
                 column(DocumentTypeSL; "Document Type") { }
                 column(DocumentNoSL; "Document No.") { }
                 column(LineNoSL; "Line No.") { }
