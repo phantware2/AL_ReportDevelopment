@@ -24,43 +24,6 @@
       <rd:DataSourceID>0f950887-bdb7-4ef9-85b0-8c51f1fd1b24</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="DocumentTypeSH">
-          <DataField>DocumentTypeSH</DataField>
-        </Field>
-        <Field Name="NoSH">
-          <DataField>NoSH</DataField>
-        </Field>
-        <Field Name="PostingDateSH">
-          <DataField>PostingDateSH</DataField>
-        </Field>
-        <Field Name="CustomerNoSH">
-          <DataField>CustomerNoSH</DataField>
-        </Field>
-        <Field Name="DocumentTypeSL">
-          <DataField>DocumentTypeSL</DataField>
-        </Field>
-        <Field Name="DocumentNoSL">
-          <DataField>DocumentNoSL</DataField>
-        </Field>
-        <Field Name="LineNoSL">
-          <DataField>LineNoSL</DataField>
-        </Field>
-        <Field Name="NoSL">
-          <DataField>NoSL</DataField>
-        </Field>
-        <Field Name="Comment">
-          <DataField>Comment</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1180,12 +1143,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1223,4 +1180,41 @@ End Function
 </Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="DocumentTypeSH">
+          <DataField>DocumentTypeSH</DataField>
+        </Field>
+        <Field Name="NoSH">
+          <DataField>NoSH</DataField>
+        </Field>
+        <Field Name="PostingDateSH">
+          <DataField>PostingDateSH</DataField>
+        </Field>
+        <Field Name="CustomerNoSH">
+          <DataField>CustomerNoSH</DataField>
+        </Field>
+        <Field Name="DocumentTypeSL">
+          <DataField>DocumentTypeSL</DataField>
+        </Field>
+        <Field Name="DocumentNoSL">
+          <DataField>DocumentNoSL</DataField>
+        </Field>
+        <Field Name="LineNoSL">
+          <DataField>LineNoSL</DataField>
+        </Field>
+        <Field Name="NoSL">
+          <DataField>NoSL</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
