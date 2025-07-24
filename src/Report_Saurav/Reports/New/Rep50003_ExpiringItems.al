@@ -18,6 +18,7 @@ report 50003 "Expiring Items"
             column(Quantity; Quantity) { }
             column(RemainingQuantity; "Remaining Quantity") { }
             column(SerialNo; "Serial No.") { }
+            column(TillExpirationDate; TillExpirationDate) { }
 
             trigger OnPreDataItem()
             begin
@@ -44,6 +45,11 @@ report 50003 "Expiring Items"
                 }
             }
         }
+    }
+
+    labels
+    {
+        ExpiringInLbl = 'Expiring In..';
     }
 
     trigger OnPreReport()
