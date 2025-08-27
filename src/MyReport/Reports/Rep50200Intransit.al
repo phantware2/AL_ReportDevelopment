@@ -3,7 +3,7 @@ report 50200 MyIntransitReport
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = Excel;
-    ExcelLayout = './Layouts/MyIntransitReport.xlsx';
+    ExcelLayout = './src/MyReport/layouts/MyIntransitReport.xlsx';
 
     dataset
     {
