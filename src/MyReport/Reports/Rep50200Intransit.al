@@ -29,6 +29,7 @@ report 50200 MyIntransitReport
             }
             column(NoofDays; NoofDays)
             {
+
             }
             dataitem("Transfer Line"; "Transfer Line")
             {
@@ -47,36 +48,10 @@ report 50200 MyIntransitReport
                     IncludeCaption = true;
                 }
             }
-        }
-    }
-
-    requestpage
-    {
-        AboutTitle = 'Teaching tip title';
-        AboutText = 'Teaching tip content';
-        layout
-        {
-            area(Content)
-            {
-                group(GroupName)
-                {
-                    // field(Name; SourceExpression)
-                    // {
-
-                    // }
-                }
-            }
-        }
-
-        actions
-        {
-            area(processing)
-            {
-                action(LayoutName)
-                {
-
-                }
-            }
+            trigger OnAfterGetRecord()
+            begin
+                NoofDays := Today() - "Posting Date";
+            end;
         }
     }
     var
