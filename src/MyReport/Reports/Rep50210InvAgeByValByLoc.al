@@ -3,7 +3,7 @@ report 50210 "Inventory Age by Value by Loca"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './src/MyReport/layouts/MyIntransitReport.rdl';
+    RDLCLayout = './src/MyReport/layouts/InventoryAgeByValueByLocation.rdl';
     Caption = 'Inventory Age by Value by Location';
 
     dataset
