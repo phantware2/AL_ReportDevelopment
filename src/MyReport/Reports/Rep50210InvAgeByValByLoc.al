@@ -53,7 +53,19 @@ report 50210 "Inventory Age by Value by Loca"
             {
                 IncludeCaption = true;
             }
-            column(Qty181Above; "Qty 181+")
+            column(Qty180_210; "val 181-210")
+            {
+                IncludeCaption = true;
+            }
+            column(Qty210_240; "Qty 210-240")
+            {
+                IncludeCaption = true;
+            }
+            column(Qty240_270; "Qty 240-270")
+            {
+                IncludeCaption = true;
+            }
+            column(Qty270_300; "Qty 270-300")
             {
                 IncludeCaption = true;
             }
@@ -81,7 +93,19 @@ report 50210 "Inventory Age by Value by Loca"
             {
                 IncludeCaption = true;
             }
-            column(Val181Above; "val 181+")
+            column(Val181_210; "val 181-210")
+            {
+                IncludeCaption = true;
+            }
+            column(Val210_240; "val 210-240")
+            {
+                IncludeCaption = true;
+            }
+            column(Val240_270; "val 240-270")
+            {
+                IncludeCaption = true;
+            }
+            column(Val270_300; "val 270-300")
             {
                 IncludeCaption = true;
             }
@@ -179,6 +203,31 @@ report 50210 "Inventory Age by Value by Loca"
                     begin
                         TempBuffer."Qty 31-60" += ILE."Remaining Quantity";
                         TempBuffer."Val 31-60" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 90:
+                    begin
+                        TempBuffer."Qty 61-90" += ILE."Remaining Quantity";
+                        TempBuffer."Val 61-90" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 120:
+                    begin
+                        TempBuffer."Qty 91-120" += ILE."Remaining Quantity";
+                        TempBuffer."val 91-120" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 150:
+                    begin
+                        TempBuffer."Qty 121-150" += ILE."Remaining Quantity";
+                        TempBuffer."val 121-150" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 180:
+                    begin
+                        TempBuffer."Qty 151-180" += ILE."Remaining Quantity";
+                        TempBuffer."val 151-180" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 210:
+                    begin
+                        TempBuffer."Qty 181-210" += ILE."Remaining Quantity";
+                        TempBuffer."val 181-210" += ILE."Remaining Quantity" * CostPerUnit;
                     end;
             END;
             TempBuffer."Total Qty" += ILE."Remaining Quantity";
