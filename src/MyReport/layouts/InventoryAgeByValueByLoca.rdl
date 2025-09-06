@@ -249,6 +249,12 @@ End Function
         <Field Name="ItemNo">
           <DataField>ItemNo</DataField>
         </Field>
+        <Field Name="Today">
+          <DataField>Today</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
         <Field Name="Description">
           <DataField>Description</DataField>
         </Field>

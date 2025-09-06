@@ -153,6 +153,8 @@ report 50210 "Inventory Age by Value by Loca"
                 Item.Get(ILE."Item No.");
                 TempBuffer.Init();
                 TempBuffer."Item No." := ILE."Item No.";
+                TempBuffer.PostingDate := ILE."Posting Date";
+                TempBuffer.Today := TodayDate;
                 TempBuffer."Item Category" := Item."Item Category Code";
                 TempBuffer."Inventory Posting Group" := Item."Inventory Posting Group";
                 TempBuffer."Location Code" := ILE."Location Code";
@@ -172,6 +174,11 @@ report 50210 "Inventory Age by Value by Loca"
                     begin
                         TempBuffer."Qty 0-30" += ILE."Remaining Quantity";
                         TempBuffer."Val 0-30" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 60:
+                    begin
+                        TempBuffer."Qty 31-60" += ILE."Remaining Quantity";
+                        TempBuffer."Val 31-60" += ILE."Remaining Quantity" * CostPerUnit;
                     end;
             END;
             TempBuffer."Total Qty" += ILE."Remaining Quantity";

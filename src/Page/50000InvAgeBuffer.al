@@ -15,6 +15,8 @@ page 50000 "Inventory Age Buffer List"
                 field("Item No."; Rec."Item No.") { }
                 field("Description"; Rec."Description") { }
                 field("Location Code"; Rec."Location Code") { }
+                field(Today; Rec.Today) { }
+                field(PostingDate; Rec.PostingDate) { }
                 field("Item Category"; Rec."Item Category") { }
                 field("Inventory Posting Group"; Rec."Inventory Posting Group") { }
                 field("Qty 0-30"; Rec."Qty 0-30") { }
