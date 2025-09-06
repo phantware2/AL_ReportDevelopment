@@ -3,7 +3,7 @@ report 50210 "Inventory Age by Value by Loca"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './src/MyReport/layouts/InventoryAgeByValueByLocation.rdl';
+    RDLCLayout = './src/MyReport/layouts/InventoryAgeByValueByLoca.rdl';
     Caption = 'Inventory Age by Value by Location';
 
     dataset
@@ -123,7 +123,7 @@ report 50210 "Inventory Age by Value by Loca"
     }
 
     var
-        TempBuffer: Record "Inventory Age Buffer" temporary;
+        TempBuffer: Record "Inventory Age Buffer";
         LocationFilter: Code[10];
 
     procedure GenerateInventoryAging()
@@ -158,6 +158,23 @@ report 50210 "Inventory Age by Value by Loca"
                     TempBuffer.Description := Item.Description;
                 TempBuffer.Insert();
             end;
+            ILE.CalcFields("Cost Amount (Actual)", "Cost Amount (Expected)");
+
+            if ILE.Quantity <> 0 then
+                CostPerUnit := (ILE."Cost Amount (Actual)" + ILE."Cost Amount (Expected)" / ILE.Quantity)
+            else
+                CostPerUnit := 0;
+
+            CASE TRUE of
+                ItemAge <= 30:
+                    begin
+                        TempBuffer."Qty 0-30" += ILE."Remaining Quantity";
+                        TempBuffer."Val 0-30" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+            END;
+            TempBuffer."Total Qty" += ILE."Remaining Quantity";
+            TempBuffer."Total Value" += ILE."Remaining Quantity" * CostPerUnit;
+            TempBuffer.Modify();
         until ILE.Next() = 0;
     end;
 }
