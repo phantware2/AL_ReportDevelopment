@@ -29,6 +29,7 @@ page 50000 "Inventory Age Buffer List"
                 field("Qty 210-240"; Rec."Qty 210-240") { }
                 field("Qty 240-270"; Rec."Qty 240-270") { }
                 field("Qty 270-300"; Rec."Qty 270-300") { }
+                field("Qty 300+"; Rec."Qty 300+") { }
                 field("Val 0-30"; Rec."Val 0-30") { }
                 field("Val 31-60"; Rec."Val 31-60") { }
                 field("Val 61-90"; Rec."Val 61-90") { }
@@ -39,6 +40,7 @@ page 50000 "Inventory Age Buffer List"
                 field("val 210-240"; Rec."val 210-240") { }
                 field("val 240-270"; Rec."val 240-270") { }
                 field("val 270-300"; Rec."val 270-300") { }
+                field("val 300+"; Rec."val 300+") { }
                 field("Total Qty"; Rec."Total Qty") { }
                 field("Total Value"; Rec."Total Value") { }
             }

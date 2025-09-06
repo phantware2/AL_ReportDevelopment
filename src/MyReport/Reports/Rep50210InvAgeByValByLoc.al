@@ -229,6 +229,25 @@ report 50210 "Inventory Age by Value by Loca"
                         TempBuffer."Qty 181-210" += ILE."Remaining Quantity";
                         TempBuffer."val 181-210" += ILE."Remaining Quantity" * CostPerUnit;
                     end;
+                ItemAge <= 240:
+                    begin
+                        TempBuffer."Qty 210-240" += ILE."Remaining Quantity";
+                        TempBuffer."val 210-240" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 270:
+                    begin
+                        TempBuffer."Qty 240-270" += ILE."Remaining Quantity";
+                        TempBuffer."val 240-270" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                ItemAge <= 300:
+                    begin
+                        TempBuffer."Qty 270-300" += ILE."Remaining Quantity";
+                        TempBuffer."val 270-300" += ILE."Remaining Quantity" * CostPerUnit;
+                    end;
+                else begin
+                    TempBuffer."Qty 300+" += ILE."Remaining Quantity";
+                    TempBuffer."val 300+" += ILE."Remaining Quantity" * CostPerUnit;
+                end;
             END;
             TempBuffer."Total Qty" += ILE."Remaining Quantity";
             TempBuffer."Total Value" += ILE."Remaining Quantity" * CostPerUnit;
