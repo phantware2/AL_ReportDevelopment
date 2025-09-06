@@ -91,9 +91,11 @@ report 50210 "Inventory Age by Value by Loca"
             {
                 IncludeCaption = true;
             }
+
             trigger OnPreDataItem()
             begin
-                Message('In OnPreDataItem trigger of %1', InventoryAgeBuffer.TableCaption);
+                InventoryAgeBuffer.DeleteAll();
+                GenerateInventoryAging();
             end;
         }
     }
@@ -121,5 +123,41 @@ report 50210 "Inventory Age by Value by Loca"
     }
 
     var
-        myInt: Integer;
+        TempBuffer: Record "Inventory Age Buffer" temporary;
+        LocationFilter: Code[10];
+
+    procedure GenerateInventoryAging()
+    var
+        ILE: Record "Item Ledger Entry";
+        Item: Record Item;
+        TodayDate: Date;
+        ItemAge: Integer;
+        CostPerUnit: Decimal;
+    begin
+        TodayDate := Today();
+
+        ILE.SetFilter("Remaining Quantity", '<> 0');
+        if LocationFilter <> '' then
+            ILE.SetFilter("Location Code", LocationFilter);
+        if ILE.FindSet() then
+            ILE.CalcFields("Cost Amount (Actual)", "Cost Amount (Expected)");
+        repeat
+            ItemAge := TodayDate - ILE."Posting Date";
+
+            TempBuffer.Reset();
+            TempBuffer.SetRange("Item No.", ILE."Item No.");
+            TempBuffer.SetRange("Location Code", ILE."Location Code");
+            if not TempBuffer.FindFirst() then begin
+                Item.Get(ILE."Item No.");
+                TempBuffer.Init();
+                TempBuffer."Item No." := ILE."Item No.";
+                TempBuffer."Item Category" := Item."Item Category Code";
+                TempBuffer."Inventory Posting Group" := Item."Inventory Posting Group";
+                TempBuffer."Location Code" := ILE."Location Code";
+                if Item.Get(ILE."Item No.") then
+                    TempBuffer.Description := Item.Description;
+                TempBuffer.Insert();
+            end;
+        until ILE.Next() = 0;
+    end;
 }
