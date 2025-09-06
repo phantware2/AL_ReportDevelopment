@@ -4,11 +4,13 @@ table 50000 "Inventory Age Buffer"
 
     fields
     {
-        field(1; "Item No."; Code[20]) { }
+        field(1; "Item No."; Code[20]) { TableRelation = Item; }
         field(2; "Description"; Text[100]) { }
         field(3; "Location Code"; Code[10]) { TableRelation = Location; }
         field(4; "Item Category"; Code[30]) { TableRelation = "Item Category"; }
         field(5; "Inventory Posting Group"; Code[30]) { TableRelation = "Inventory Posting Group"; }
+        field(6; PostingDate; Date) { }
+        field(7; Today; Date) { }
         field(10; "Qty 0-30"; Decimal) { }
         field(11; "Qty 31-60"; Decimal) { }
         field(12; "Qty 61-90"; Decimal) { }

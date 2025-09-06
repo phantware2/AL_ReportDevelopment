@@ -15,6 +15,8 @@ report 50210 "Inventory Age by Value by Loca"
             {
                 IncludeCaption = true;
             }
+            column(Today; Today) { }
+            column(PostingDate; PostingDate) { }
             column(Description; Description)
             {
                 IncludeCaption = true;
