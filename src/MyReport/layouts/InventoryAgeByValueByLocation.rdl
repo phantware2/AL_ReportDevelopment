@@ -1869,6 +1869,15 @@
       </DefaultValue>
       <Prompt>Qty270_300Caption</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Qty300AboveCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Qty300AboveCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Qty300AboveCaption</Prompt>
+    </ReportParameter>
     <ReportParameter Name="Val0_30Caption">
       <DataType>String</DataType>
       <DefaultValue>
@@ -1959,6 +1968,15 @@
       </DefaultValue>
       <Prompt>Val270_300Caption</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Val300AboveCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Val300AboveCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Val300AboveCaption</Prompt>
+    </ReportParameter>
     <ReportParameter Name="TotalQtyCaption">
       <DataType>String</DataType>
       <DefaultValue>
@@ -1981,7 +1999,7 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>26</NumberOfRows>
+      <NumberOfRows>28</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -2056,61 +2074,71 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>14</RowIndex>
-          <ParameterName>Val0_30Caption</ParameterName>
+          <ParameterName>Qty300AboveCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>15</RowIndex>
-          <ParameterName>Val31_60Caption</ParameterName>
+          <ParameterName>Val0_30Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>16</RowIndex>
-          <ParameterName>Val61_90Caption</ParameterName>
+          <ParameterName>Val31_60Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>17</RowIndex>
-          <ParameterName>Val91_120Caption</ParameterName>
+          <ParameterName>Val61_90Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>18</RowIndex>
-          <ParameterName>Val121_150Caption</ParameterName>
+          <ParameterName>Val91_120Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>19</RowIndex>
-          <ParameterName>Val151_180Caption</ParameterName>
+          <ParameterName>Val121_150Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>20</RowIndex>
-          <ParameterName>Val181_210Caption</ParameterName>
+          <ParameterName>Val151_180Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>21</RowIndex>
-          <ParameterName>Val210_240Caption</ParameterName>
+          <ParameterName>Val181_210Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>22</RowIndex>
-          <ParameterName>Val240_270Caption</ParameterName>
+          <ParameterName>Val210_240Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>23</RowIndex>
-          <ParameterName>Val270_300Caption</ParameterName>
+          <ParameterName>Val240_270Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>24</RowIndex>
-          <ParameterName>TotalQtyCaption</ParameterName>
+          <ParameterName>Val270_300Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>25</RowIndex>
+          <ParameterName>Val300AboveCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>26</RowIndex>
+          <ParameterName>TotalQtyCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>27</RowIndex>
           <ParameterName>TotalValueCaption</ParameterName>
         </CellDefinition>
       </CellDefinitions>
@@ -2234,6 +2262,12 @@ End Function
         <Field Name="Qty270_300Format">
           <DataField>Qty270_300Format</DataField>
         </Field>
+        <Field Name="Qty300Above">
+          <DataField>Qty300Above</DataField>
+        </Field>
+        <Field Name="Qty300AboveFormat">
+          <DataField>Qty300AboveFormat</DataField>
+        </Field>
         <Field Name="Val0_30">
           <DataField>Val0_30</DataField>
         </Field>
@@ -2293,6 +2327,12 @@ End Function
         </Field>
         <Field Name="Val270_300Format">
           <DataField>Val270_300Format</DataField>
+        </Field>
+        <Field Name="Val300Above">
+          <DataField>Val300Above</DataField>
+        </Field>
+        <Field Name="Val300AboveFormat">
+          <DataField>Val300AboveFormat</DataField>
         </Field>
         <Field Name="TotalQty">
           <DataField>TotalQty</DataField>

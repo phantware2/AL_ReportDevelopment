@@ -69,6 +69,10 @@ report 50210 "Inventory Age by Value by Loca"
             {
                 IncludeCaption = true;
             }
+            column(Qty300Above; "Qty 300+")
+            {
+                IncludeCaption = true;
+            }
             column(Val0_30; "Val 0-30")
             {
                 IncludeCaption = true;
@@ -106,6 +110,10 @@ report 50210 "Inventory Age by Value by Loca"
                 IncludeCaption = true;
             }
             column(Val270_300; "val 270-300")
+            {
+                IncludeCaption = true;
+            }
+            column(Val300Above; "val 300+")
             {
                 IncludeCaption = true;
             }
