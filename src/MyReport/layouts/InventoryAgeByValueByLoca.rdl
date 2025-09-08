@@ -113,14 +113,41 @@
       </DefaultValue>
       <Prompt>Qty151_180Caption</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Qty181AboveCaption">
+    <ReportParameter Name="Qty180_210Caption">
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>Qty181AboveCaption</Value>
+          <Value>Qty180_210Caption</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Qty181AboveCaption</Prompt>
+      <Prompt>Qty180_210Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Qty210_240Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Qty210_240Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Qty210_240Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Qty240_270Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Qty240_270Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Qty240_270Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Qty270_300Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Qty270_300Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Qty270_300Caption</Prompt>
     </ReportParameter>
     <ReportParameter Name="Val0_30Caption">
       <DataType>String</DataType>
@@ -176,14 +203,41 @@
       </DefaultValue>
       <Prompt>Val151_180Caption</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Val181AboveCaption">
+    <ReportParameter Name="Val181_210Caption">
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>Val181AboveCaption</Value>
+          <Value>Val181_210Caption</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Val181AboveCaption</Prompt>
+      <Prompt>Val181_210Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Val210_240Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Val210_240Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Val210_240Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Val240_270Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Val240_270Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Val240_270Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Val270_300Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Val270_300Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Val270_300Caption</Prompt>
     </ReportParameter>
     <ReportParameter Name="TotalQtyCaption">
       <DataType>String</DataType>
@@ -300,11 +354,29 @@ End Function
         <Field Name="Qty151_180Format">
           <DataField>Qty151_180Format</DataField>
         </Field>
-        <Field Name="Qty181Above">
-          <DataField>Qty181Above</DataField>
+        <Field Name="Qty180_210">
+          <DataField>Qty180_210</DataField>
         </Field>
-        <Field Name="Qty181AboveFormat">
-          <DataField>Qty181AboveFormat</DataField>
+        <Field Name="Qty180_210Format">
+          <DataField>Qty180_210Format</DataField>
+        </Field>
+        <Field Name="Qty210_240">
+          <DataField>Qty210_240</DataField>
+        </Field>
+        <Field Name="Qty210_240Format">
+          <DataField>Qty210_240Format</DataField>
+        </Field>
+        <Field Name="Qty240_270">
+          <DataField>Qty240_270</DataField>
+        </Field>
+        <Field Name="Qty240_270Format">
+          <DataField>Qty240_270Format</DataField>
+        </Field>
+        <Field Name="Qty270_300">
+          <DataField>Qty270_300</DataField>
+        </Field>
+        <Field Name="Qty270_300Format">
+          <DataField>Qty270_300Format</DataField>
         </Field>
         <Field Name="Val0_30">
           <DataField>Val0_30</DataField>
@@ -342,11 +414,29 @@ End Function
         <Field Name="Val151_180Format">
           <DataField>Val151_180Format</DataField>
         </Field>
-        <Field Name="Val181Above">
-          <DataField>Val181Above</DataField>
+        <Field Name="Val181_210">
+          <DataField>Val181_210</DataField>
         </Field>
-        <Field Name="Val181AboveFormat">
-          <DataField>Val181AboveFormat</DataField>
+        <Field Name="Val181_210Format">
+          <DataField>Val181_210Format</DataField>
+        </Field>
+        <Field Name="Val210_240">
+          <DataField>Val210_240</DataField>
+        </Field>
+        <Field Name="Val210_240Format">
+          <DataField>Val210_240Format</DataField>
+        </Field>
+        <Field Name="Val240_270">
+          <DataField>Val240_270</DataField>
+        </Field>
+        <Field Name="Val240_270Format">
+          <DataField>Val240_270Format</DataField>
+        </Field>
+        <Field Name="Val270_300">
+          <DataField>Val270_300</DataField>
+        </Field>
+        <Field Name="Val270_300Format">
+          <DataField>Val270_300Format</DataField>
         </Field>
         <Field Name="TotalQty">
           <DataField>TotalQty</DataField>
