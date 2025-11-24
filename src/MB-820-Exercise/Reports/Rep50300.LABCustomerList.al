@@ -31,21 +31,21 @@ report 50300 LABCustomerList
         layout(Example_RDLCLayout)
         {
             Type = RDLC;
-            LayoutFile = './src/MB-820-Exercise/Reports/layouts/LABCustomerList.rdl';
+            LayoutFile = './src/MB-820-Exercise/layouts/LABCustomerList.rdl';
             Caption = 'LAB Customer List RDLC Layout';
             Summary = 'This is the RDLC layout for the LAB Customer List report.';
         }
         layout(Example_WORDLayout)
         {
             Type = Word;
-            LayoutFile = './src/MB-820-Exercise/Reports/layouts/LABCustomerList.docx';
+            LayoutFile = './src/MB-820-Exercise/layouts/LABCustomerList.docx';
             Caption = 'LAB Customer List Word Layout';
             Summary = 'This is the Word layout for the LAB Customer List report.';
         }
         layout(Example_EXCELLayout)
         {
             Type = Excel;
-            LayoutFile = './src/MB-820-Exercise/Reports/layouts/LABCustomerList.xlsx';
+            LayoutFile = './src/MB-820-Exercise/layouts/LABCustomerList.xlsx';
             Caption = 'LAB Customer List Excel Layout';
             Summary = 'This is the Excel layout for the LAB Customer List report.';
         }
